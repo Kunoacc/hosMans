@@ -1,4 +1,43 @@
-
+html{
+  font-family: ubuntu;
+}
+th, td, .table>tbody>tr>td, .table>tbody>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  text-align: left;;
+  padding-left: 90px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.demo-avatar{
+  background-color: whitesmoke;
+  border-radius: 50%;
+  height: inherit;
+  width: auto;
+  position: relative;
+  padding-top: 30;
+}
+/*
+#trans{
+  background-color: transparent;
+  background-image: url(/hosMans/images/Hostel/5.jpg);
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#trans .bc{
+  background-color: rgba(0, 0, 0, 0.6);
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  width: 100%;
+  height: 100%;
+}
+*/
+.demo-drawer-header{
+  height: 200px;
+  background-color: whitesmoke;
+}
 .demo-ribbon {
   width: 100%;
   height: 40vh;
@@ -161,19 +200,55 @@ box-shadow:  0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0,
   border-radius: 10px;
   width: 65%;
   margin: auto;
-
-
 }
 
 fieldset{
   margin: auto;
   align-items: center;
 }
+
 #Sign-Up{
 margin: auto;
 }
+
 #stuffie{
   box-shadow:  0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
   width: 65%;
   margin: auto;
+}
+.welcome{
+color: black;
+font-family: ubuntu;
+font-size: 50;
+height: 120;
+padding-top: 20;
+padding-left: 300;
+}
+.mdl-button{
+  font-size: 12px;
+  height: 36px;
+}
+.update-details{
+  max-width: 500px;
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-left: 30px;
+}
+.update-details.two{
+  padding-right: 10px;
+}
+.update-details.three{
+  padding-right: 10px;
+}
+.update-details-title{
+  font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+    height: 39px;
+}
+.mdl-color--teal-300{
+  background-color: #3F51B5 !important;
 }

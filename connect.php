@@ -43,4 +43,5 @@ function NewUser()
 				echo "SORRY...YOU ARE ALREADY REGISTERED USER...";
 			}
 		}
+	}
 		?>

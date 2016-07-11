@@ -1,0 +1,112 @@
+.input-group, .input-group .form-control,
+ .form-group .input-group, .input-group .form-control:last-child{
+  padding: 0 35px 0 10px;
+    background-image: none;
+    font-size: 14px;
+    line-height: 32px;
+    color: #333333;
+    width: 100%;
+    border-radius: 5px;
+}
+.current-mail ,label ,.current-mail label{
+  height: 48px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #777777;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 15px;
+
+}
+.dalign{
+  display: table-cell;
+  vertical-align: top;
+  float: right;
+    margin-top: -35;
+    margin-right: 35;
+}
+.dalign::before{
+  content: '';
+    position: absolute;
+    width: 19px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: -14px -10610px;
+    right: 6px;
+    top: 7px;
+}
+.detat{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  margin: 10px;
+  background-color: white;
+  width: 100%;
+  height: inherit;
+}
+.link{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.too-many{
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.labels-input{
+  display: table-cell;
+  vertical-align: middle;
+  width: 250px;
+}
+.labels-input.room{
+  display: table-cell;
+  vertical-align: middle;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 35px;
+}
+.labels{
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 50px;
+}
+.label-room{
+    display: table-cell;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-too-many{
+  width: 80%;
+  margin: auto;
+  padding-top: 30px;
+}
+.input-password{
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 50px;
+  width: 320px;
+  padding-top: 13px;
+}
+.labas{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#magic{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  display: flex;
+}
+.room-header{
+  color: whitesmoke;
+  background-color: #37474f !important;
+  width: 100%;
+  height: 85px;
+  font-size: 75px;
+  font-family: ubuntu;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}

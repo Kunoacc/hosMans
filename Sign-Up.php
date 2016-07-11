@@ -1,6 +1,6 @@
 <?php
 //connectivity
-require('config.php');
+include 'config.php';
 
 //Verification
 	$num1 = range(9,0);
@@ -12,7 +12,7 @@ require('config.php');
 	$sum = $n1 + $n2;
 	$res = $n1." + ".$n2;
 
-	if(isset($_POST['save']))
+	if(isset($_POST['register']))
 	{
 		if($_POST['c1']==$_POST['c2'])
 		{
@@ -38,17 +38,18 @@ require('config.php');
 			$ret = mysql_num_rows($cq);
 			if($ret == true)
 			{
-				echo "<center><h2 style='color:red'>User already exists</h2></center>";
+				$msg = 'This user already exists';
+				echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 			}
 			//insert into database
-			else
+			if($ret == false)
 			{
-				$query = "INSERT INTO all_data VALUES ('','$fname', '$lname', '$reg', '$email', '$p', '$number', '$s_name', '$s_num',
-					'$status', '$gender', '$session', '$dept', '$level', '$address')";
+				$query = "INSERT INTO all_data (`id`, `fname`, `lname`, `reg`, `email`, `pass`, `num`, `s_name`, `s_num`, `status`, `gender`, `session`, `dept`, `level`, `address`)
+ 						  VALUES ('','$fname', '$lname', '$reg', '$email', '$p', '$number', '$s_name', '$s_num', '$status', '$gender', '$session', '$dept', '$level', '$address')";
 				mysql_query($query);
-
-			echo "<center><h2 style='color:green'>Details Saved!</h2></center>";
-			header('Location: Sign-In.php');
+				$msg = 'Registration Successful!';
+				echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+				header('Location: Sign-In.php');
 			}
 		}
 		else
@@ -74,12 +75,8 @@ require('config.php');
   <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-1001 mdl-color-text--grey-800">
          <div class="mdl-layout__header-row"><a href="index.php">
-           <span class="mdl-layout-title1">HOS-MANS</span></a>
+           <span class="mdl-layout-title1">HMS</span></a>
            <div class="mdl-layout-spacer"></div>
-           <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="about.html">About-Us</a>
-        <a class="mdl-navigation__link" href="contact.html">Contact-Us</a>
-      </nav>
          </div>
        </header>
        <div class="demo-ribbon"></div>
@@ -127,7 +124,7 @@ require('config.php');
          <br>
 <div id="stuffie">
 <ul class="breadcrumb">
-<li><a href="Index.php">Home</a></li>
+<li><a href="index.php">Home</a></li>
 <li class="active">Register</li>
 </ul>
 </div>
@@ -333,7 +330,7 @@ echo $res." = ";
 <!-- Submit -->
 <div class="form-group" >
 	<div class="input-group input-group-sm" style="margin:auto">
- <input type="submit" class="btn btn-primary"   value="REGISTER" name="save" />&nbsp;&nbsp;
+ <input type="submit" class="btn btn-primary"   value="REGISTER" name="register" />&nbsp;&nbsp;
 <a href="Sign-In.php" class="btn btn-primary">ALREADY REGISTERED</a>
 </div>
 </div>

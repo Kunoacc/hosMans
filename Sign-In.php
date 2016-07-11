@@ -1,10 +1,11 @@
 <?php
+session_start();
 
 //connectivity
 include 'config.php';
 
 
-if(isset($_POST['logon']))
+if(isset($_POST['login']))
 {
 	$u = $_POST['reg'];
 	$pass = $_POST['pass'];
@@ -17,7 +18,7 @@ if(isset($_POST['logon']))
 	$ret = mysql_num_rows($cq);
 	if($ret == true)
 	{
-		header('Location: dashboard.php');
+		header('Location: dashboard.php?option=Home');
 	}
 	else
 	{
@@ -42,12 +43,8 @@ if(isset($_POST['logon']))
   <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-1001 mdl-color-text--grey-800">
          <div class="mdl-layout__header-row"><a href="index.php">
-           <span class="mdl-layout-title1">HOS-MANS</span></a>
+           <span class="mdl-layout-title1">HMS</span></a>
            <div class="mdl-layout-spacer"></div>
-           <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="about.html">About-Us</a>
-        <a class="mdl-navigation__link" href="contact.html">Contact-Us</a>
-      </nav>
          </div>
        </header>
        <div class="demo-ribbon"></div>
@@ -95,7 +92,7 @@ if(isset($_POST['logon']))
          <br>
 <div id="stuffie">
 <ul class="breadcrumb">
-<li><a href="Index.php">Home</a></li>
+<li><a href="index.php">Home</a></li>
 <li><a href="Sign-Up.php">Register</a></li>
 <li class="active">Sign In</li>
 </ul>
@@ -145,7 +142,7 @@ if(isset($_POST['logon']))
 
 <div class="form-group" >
 	<div class="input-group input-group-sm" style="margin:auto">
- <input type="submit" class="btn btn-primary"   value="SIGN IN" name="logon" />
+ <input type="submit" class="btn btn-primary"   value="SIGN IN" name="login" />
 </div>
 </div>
 <!-- submit close-->
